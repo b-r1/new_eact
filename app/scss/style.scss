@@ -1,10 +1,50 @@
-html {
-    box-sizing: border-box;
-}
-*,
-*::before,
-*::after{
-box-sizing: inherit;
+@import 'vars';
+@import 'global';
+
+//statrt header__top
+.header__top-inner {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
 }
 
+.header__input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 415px;
+}
 
+.header__logo {
+    margin-right: 25px;
+}
+
+.header__account {
+
+    a {
+        text-decoration: none;
+    }
+
+    &-text {
+
+        font-family: arial, Verdana, sans-serif;
+        //font-weight: bold;
+        font-size: 16px;
+        color: #04415F;
+
+
+    }
+
+
+
+}
+
+.header__contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 415px;
+}
+
+//end header__top
