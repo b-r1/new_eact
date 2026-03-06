@@ -117,6 +117,8 @@
 //start header__menu
 .header__menu {
     background-color: $bg;
+    border: #000 solid 1px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.07);
 }
 
 .menu {
@@ -220,9 +222,79 @@
 
 //end header__menu
 
-*//start footer
+//start slider
+.slider {
+    //height: 589px;
+}
+
+.slider__inner {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.item__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    &-title {
+        font-size: 45px;
+        font-weight: bold;
+        color: $bg;
+        width: 487px;
+        text-align: right;
+        margin-bottom: 15px;
+    }
+
+    &-text {
+        font-size: 25px;
+        font-weight: bold;
+        width: 487px;
+        color: $bg;
+        text-align: right;
+        margin-bottom: 30px;
+    }
+
+    &-btn {
+        background-color: $bg;
+        border-radius: 50px;
+        border: $white sold 1px;
+
+        a {
+            height: 66px;
+            width: 293px;
+            color: $white;
+            text-align: center;
+            padding-top: 25px;
+        }
+    }
+
+}
+
+
+.item__right {
+
+
+    &-image {
+        min-height: 334px;
+        width: 637px;
+        background-image: url(../images/Slader__fotos-crone.png);
+        background-position: top center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+
+//end slider
+
+
+* //start footer
+
 .footer {
     background-color: $bg;
+    border: #000 solid 1px;
 
     &__inner {
         display: flex;
@@ -230,13 +302,14 @@
         padding: 50px 0px 30px;
     }
 }
-.footer {
+
+/*.footer {
     position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: 10;
-}
+}*/
 
 .footer__copy {
     border-top: 1px solid #424d53;
@@ -244,7 +317,7 @@
 
 .footer__copy-text {
     text-align: center;
-    font-size: 15px;
+    font-size: 14px;
     color: $text;
     padding: 15px 0px;
 }
@@ -260,7 +333,7 @@
 
     &-title {
         font-size: 14px;
-     //   font-family: arial, Verdana, sans-serif;
+        //   font-family: arial, Verdana, sans-serif;
 
         color: #fff;
         padding-bottom: 22px;
@@ -332,6 +405,7 @@
 .footer__form-title {
     margin-bottom: 10px;
     color: #fff;
+    font-size: 14px;
 }
 
 .footer__form {
