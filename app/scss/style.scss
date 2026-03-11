@@ -2,11 +2,22 @@
 @import 'global';
 
 //statrt header__top
+.header {
+    -webkit-user-select: none;
+    /* Safari, Chrome */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+}
+
 .header__top-inner {
     display: flex;
     justify-content: space-between;
     height: 60px;
     align-items: center;
+
 }
 
 .header__input {
@@ -29,6 +40,7 @@
     font-size: 16px;
     color: #04415F;
     position: relative;
+    text-shadow: 6px 7px 5px #999;
 
 }
 
@@ -67,6 +79,7 @@
     text-align: center;
     position: relative;
     padding: 7px;
+    text-shadow: 6px 7px 5px #999;
 }
 
 .header__contact-city::before {
@@ -89,6 +102,7 @@
     background-image: url(../images/angle-down_2.png);
     left: 90px;
     top: 3px;
+
 }
 
 .header__contact-tel {
@@ -98,6 +112,7 @@
     font-weight: bold;
     text-align: center;
     padding: 7px;
+    text-shadow: 6px 7px 5px #999;
 }
 
 .header_btn {
@@ -110,6 +125,7 @@
     border-radius: 50px;
     text-align: center;
     padding: 10px;
+    box-shadow: 6px 7px 5px #999;
 }
 
 //end header__top
@@ -118,7 +134,7 @@
 .header__menu {
     background-color: $bg;
     border: #000 solid 1px;
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.07);
+    box-shadow: 4px 10px 3px #888
 }
 
 .menu {
@@ -131,6 +147,7 @@
 
     li {
         display: inline-block;
+       //  text-shadow: 3px 5px 10px #999;
 
         &+li {
             margin-left: 30px;
@@ -225,18 +242,40 @@
 //start slider
 .slider {
     //height: 589px;
+    border-bottom: $bg solid 1px;
 }
 
 .slider__inner {
     display: flex;
     justify-content: space-between;
+    -webkit-user-select: none;
+    /* Safari, Chrome */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
 
 }
 
 .item__left {
+    z-index: -1;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    height: 550px;
+    width: 628px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: rgba(143, 181, 216, 0.6);
+    margin-bottom: 20px;
+    margin-right: 20px;
+    padding: 30px 25px 0 0;
+    box-shadow: 10px 4px 10px 3px #888;
+    background-image: url(../images/Frame_1_1.png), url(../images/Frame_1.png);
+    background-position: left bottom, right bottom;
+    background-repeat: no-repeat, no-repeat;
+
 
     &-title {
         font-size: 45px;
@@ -244,7 +283,12 @@
         color: $bg;
         width: 487px;
         text-align: right;
-        margin-bottom: 15px;
+        margin-bottom: 25px;
+        /*  -webkit-text-stroke: 0.3px #000;
+        text-stroke: 0.3px $white;*/
+        text-shadow: 6px 7px 5px #999;
+
+
     }
 
     &-text {
@@ -253,13 +297,17 @@
         width: 487px;
         color: $bg;
         text-align: right;
-        margin-bottom: 30px;
+        margin-bottom: 45px;
+        /* -webkit-text-stroke: 0.2px #000;
+        text-stroke: 0.1px $white;*/
+        text-shadow: 6px 7px 5px #999;
     }
 
     &-btn {
         background-color: $bg;
         border-radius: 50px;
-        border: $white sold 1px;
+        border: 1px solid $white;
+        box-shadow: 10px 4px 10px 3px #888;
 
         a {
             height: 66px;
@@ -269,12 +317,32 @@
             padding-top: 25px;
         }
     }
-
 }
 
-
 .item__right {
+    z-index: -1;
 
+    &-title {
+        width: 628px;
+        height: 245px;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        background-color: rgba(143, 181, 216, 0.6);
+        margin-bottom: 28px;
+        padding: 30px 25px;
+        box-shadow: 10px 4px 10px 3px #888;
+        margin-bottom: 5px;
+        text-align: right;
+        font-weight: bold;
+        font-size: 32px;
+        color: $bg;
+        background-color: #E5E3E3;
+        background-image: url(../images/Восток.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        text-shadow: 6px 7px 5px #999;
+       // border: #000 solid 1px;
+    }
 
     &-image {
         min-height: 334px;
@@ -286,15 +354,28 @@
     }
 }
 
-
 //end slider
 
+// start catalog
+.catalog{
+    height: 500px;
+}
 
-* //start footer
+//end catalog
+
+
+//start footer
 
 .footer {
     background-color: $bg;
     border: #000 solid 1px;
+    -webkit-user-select: none;
+    /* Safari, Chrome */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
 
     &__inner {
         display: flex;
@@ -334,7 +415,6 @@
     &-title {
         font-size: 14px;
         //   font-family: arial, Verdana, sans-serif;
-
         color: #fff;
         padding-bottom: 22px;
         margin-bottom: 30px;
@@ -348,9 +428,7 @@
             width: 51px;
             height: 3px;
             background-color: $green;
-
         }
-
     }
 
     &-text {
