@@ -147,7 +147,7 @@
 
     li {
         display: inline-block;
-       //  text-shadow: 3px 5px 10px #999;
+        text-shadow: 3px 3px 3px #000;
 
         &+li {
             margin-left: 30px;
@@ -199,8 +199,10 @@
 
 
 .header__drop-down a:hover {
-    color: #a0ccd6;
+    color: $white;
+    //color: #a0ccd6;
     transition: all .4s;
+    text-shadow: 3px 3px 3px $bg;
 }
 
 .drop-down__list a {
@@ -228,13 +230,15 @@
     overflow: visible;
     opacity: 1;
     transition: all .7s;
+
 }
 
 .header__drop-down.drop-down:hover>a {
-    color: #a0ccd6;
+    color: $white;
     border-top: 5px solid $border;
     background-color: $bg;
     transition: all .6s;
+    text-shadow: 3px 3px 3px $bg;
 }
 
 //end header__menu
@@ -341,7 +345,7 @@
         background-repeat: no-repeat;
         background-position: center;
         text-shadow: 6px 7px 5px #999;
-       // border: #000 solid 1px;
+        // border: #000 solid 1px;
     }
 
     &-image {
@@ -357,12 +361,141 @@
 //end slider
 
 // start catalog
-.catalog{
-    height: 500px;
+.catalog {
+    margin-bottom: 10px;
+    border-bottom: $bg solid 1px;
+
+    &__title {
+        font-size: 45px;
+        font-weight: bold;
+        color: $bg;
+        margin: 20px 0;
+        text-shadow: 6px 7px 5px #999;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+.catalog__item-car,
+.catalog__item-trailer,
+.catalog__item-drump,
+.catalog__item-machinery,
+.catalog__item-build,
+.catalog__item-bus {
+    width: 407px;
+    height: 233px;
+    background-color: $bc;
+    border-radius: 50px;
+    padding: 20px 40px;
+    box-shadow: 6px 7px 5px #999;
+    margin-bottom: 30px;
+
+    &:hover {
+        background-color: $bg;
+        transition: all 0.6s;
+
+        .technic__title {
+            color: $white;
+            transition: all 0.6s;
+            text-shadow: 6px 7px 5px #000;
+        }
+
+        .conditions {
+            color: $white;
+            transition: all 0.6s;
+            text-shadow: 6px 7px 5px #000;
+        }
+    }
+
+}
+
+.technic__title {
+    font-size: 20px;
+    font-weight: bold;
+    color: $bg;
+    margin-bottom: 10px;
+    text-shadow: 6px 7px 5px #999;
+}
+
+.conditions {
+    padding-left: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: $bg;
+    text-shadow: 6px 7px 5px #999;
+}
+
+.technic__images {
+    &-car {
+        background-image: url(../images/catalog-car.png);
+        width: 201px;
+        height: 77px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 35px 0px 0px 140px;
+    }
+
+    &-trailer {
+        background-image: url(../images/catalog-trailer.png);
+        width: 235px;
+        height: 121px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 10px 14px 12px 115px;
+    }
+
+    &-drump {
+        background-image: url(../images/catalog-drump.png);
+        width: 178px;
+        height: 127px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 3px 14px 11px 160px;
+    }
+
+    &-machinery {
+        background-image: url(../images/catalog-machinery.png);
+        width: 173px;
+        height: 122px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 10px 14px 11px 163px;
+    }
+
+    &-build {
+        background-image: url(../images/catalog-build.png);
+        width: 182px;
+        height: 114px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 10px 14px 11px 185px;
+    }
+
+        &-bus {
+        background-image: url(../images/catalog-bus.png);
+        width: 182px;
+        height: 114px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 14px 14px 11px 162px;
+    }
 }
 
 //end catalog
 
+
+//start Abouts
+
+.Abouts {
+    height: 300px;
+}
+
+
+// end Abouts
 
 //start footer
 
